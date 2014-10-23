@@ -1,0 +1,9 @@
+#
+# Module configuration file for
+# thu23
+# (com.mycompany.thu23)
+#
+
+displayname: thu23
+moduletype: customguiapplication
+depends: com.eqela.libspriteengine, com.eqela.libaudioclip

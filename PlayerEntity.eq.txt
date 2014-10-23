@@ -1,0 +1,24 @@
+public class PlayerEntity : SEEntity
+{
+    SESprite wol2;
+    int w;
+    int h;
+    public void initialize(SEResourceCache rsc)
+    {
+        base.initialize(rsc);    
+        w = get_scene_width();
+        h = get_scene_height();
+        rsc.prepare_image("mywol2", "wol2" , 0.1*w);
+        wol2 = add_sprite_for_image(SEImage.for_resource("mywol2"));
+        wol2.move(w*0.5,h*0.5);
+    }
+    public void tick(TimeVal now,double delta)
+    {
+        base.tick(now,delta);
+        wol2.move(MainScene.x,MainScene.y);
+    }    
+    public void cleanup()
+    {
+        base.cleanup();
+    }
+}
